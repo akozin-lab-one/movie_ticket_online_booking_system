@@ -1,0 +1,30 @@
+/* //Scroll snapping */
+
+.snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+}
+
+
+/* Define snap points for children */
+
+.snap-x-mandatory>* {
+    scroll-snap-align: start;
+}
+
+
+/* .swiper {
+    width: 80%;
+    height: 80%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0002, #0004);
+} */

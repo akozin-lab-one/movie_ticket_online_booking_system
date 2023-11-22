@@ -1,0 +1,22 @@
+@keyframes gradientAnimation {
+    0% {
+        color: #31fc85;
+        /* Start color */
+    }
+    50% {
+        color: #DA22FF;
+        /* Middle color */
+    }
+    100% {
+        color: #4158D0;
+        /* End color */
+    }
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #FCCF31, #DA22FF, #4158D0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 3s linear infinite;
+}
