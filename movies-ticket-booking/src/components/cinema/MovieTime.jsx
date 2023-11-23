@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const MovieTime = ({
   const [currentDiv, setCurrentDiv] = useState([]);
   const [showSeat, setShowSeat] = useState(false);
   const [showTime, setShowTime] = useState("");
-  const [seatPrice, setSeatPrice] = useState([]);
+  // const [seatPrice, setSeatPrice] = useState([]);
 
   const openModal = () => {
     setIsTimeBoxOpen(true);
@@ -163,18 +163,18 @@ const MovieTime = ({
                     onClick={() => openModal()}
                     className={
                       isClicked
-                        ? "cursor-pointer"
-                        : "bg-black text-white text-xs w-[100%] lg:w-[53%] text-center p-1 rounded-lg drop-shadow-lg cursor-pointer mb-2"
+                        ? "cursor-pointer my-4"
+                        : "bg-black text-white text-xs w-[100%] lg:w-[53%] text-center p-1 rounded-lg drop-shadow-lg cursor-pointer my-3"
                     }
                   >
-                    {isClicked ? showTime : "pick a showdate"}
+                    {isClicked ? showTime.slice(0,10) : "pick a showdate"}
                   </p>
                   <p
                     onClick={() => opeanSeatsModal()}
                     className={
                       showSeat
-                        ? "cursor-pointer"
-                        : "bg-black text-white w-[100%] lg:w-[50%] text-center p-1 text-xs rounded-lg drop-shadow-lg cursor-pointer mb-2"
+                        ? "cursor-pointer my-3"
+                        : "bg-black text-white w-[100%] lg:w-[50%] text-center p-1 text-xs rounded-lg drop-shadow-lg cursor-pointer mb-2 my-3"
                     }
                   >
                     {showSeat
@@ -200,14 +200,14 @@ const MovieTime = ({
                       <h2 className="text-center text-xl font-extrabold">
                         MovieSchdule
                       </h2>
-                      <div className="rounded-lg drop-shadow-sm w-[95%] h-[75%] mx-auto grid grid-cols-2 gap-x-1 lg:grid-cols-4 lg:gap-x-2 p-2 border lg:gap-y-2">
+                      <div className="rounded-lg drop-shadow-sm w-[95%] lg:w-[85%] h-[75%] mx-auto grid grid-cols-2 gap-x-1 lg:grid-cols-4 lg:gap-x-2 p-2 border lg:gap-y-2">
                         {Oneresult.map((res) => {
                           return [
                             <div
                               onClick={() => {
                                 getDateId(res.ShowDateTime);
                               }}
-                              className="bg-gray-700 h-[100px] cursor-pointer text-white text-sm rounded-lg grid place-items-center"
+                              className="bg-gray-700 h-[100px] cursor-pointer text-white text-sm lg:text-base rounded-lg grid place-items-center"
                             >
                               {res.ShowDateTime.slice(0, 10)} <br />
                               {res.ShowDateTime.slice(
@@ -232,11 +232,11 @@ const MovieTime = ({
 
                 {isSeatBoxOpen && (
                   <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="modal-container  bg-white w-[100%] h-[98%] rounded shadow-lg p-4 z-50">
+                    <div className="modal-container  bg-white w-[100%] lg:w-[87%] h-[98%] rounded shadow-lg p-4 z-50">
                       <h2 className="text-center text-xl font-extrabold">
                         Choose Your Seat
                       </h2>
-                      <div className="rounded-lg drop-shadow-sm w-[100%] h-[90%] mx-auto  p-2 border grid grid-cols-6 gap-y-1 lg:grid-cols-11 lg:gap-1">
+                      <div className="rounded-lg drop-shadow-sm w-[100%] lg:w-[92%] h-[90%] mx-auto overflow-auto p-2 border grid grid-cols-6 gap-y-1 lg:grid-cols-11 lg:gap-1">
                         {getSeats.map((seat) => {
                           return [
                             <div

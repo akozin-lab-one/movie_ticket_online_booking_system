@@ -71,7 +71,7 @@ const UpComing = ({ upComing }) => {
               : ""}
           </div>
         </div> */}
-        <h3 className="text-center absolute bottom-11 left-[55px]  lg:bottom-11 lg:left-[455px] text-2xl tracking-wider font-bold drop-shadow-lg ">
+        <h3 className="text-center absolute w-[100%] lg:w-auto bottom-11 text-base  left-[4px]  lg:bottom-11 lg:left-[455px] lg:text-2xl tracking-wider font-bold drop-shadow-lg ">
           UpComing Movies
         </h3>
       </div>
