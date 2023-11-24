@@ -117815,6 +117815,7 @@
         }
     ],
     "Tbl_TicketReceive": [{
+        "CustomerId": 1,
         "CustomerName": "Maung Maung",
         "MovieName": "The Num",
         "Duration": "12:30",
@@ -117822,7 +117823,7 @@
         "CinemaRoom": "CinemaI",
         "SeatType": "Single",
         "Count": 1,
-        "Price": "3500 Ks"
+        "Price": 3500
 
     }]
 }

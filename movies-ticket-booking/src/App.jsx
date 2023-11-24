@@ -80,6 +80,7 @@ const App = () => {
     }
 
     useEffect(()=>{getSeatPrice()},[])
+    
     return ( 
         <div> 
             <Navbar/>

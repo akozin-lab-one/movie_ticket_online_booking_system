@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useEffect } from "react";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 
@@ -58,7 +57,14 @@ const MovieTime = ({
 
   const postData = () => {
     setIsTicketBoxOpen(true);
+    // api.post('/Tbl_TicketReceive',{  
+    //     "CustomerName": "Maung Maung",
+    //     "MovieName": "The Num"
+    // }).then(res=>console.log(res))
+    // .catch(err=>console.log(err))
+    console.log("loading");
   };
+  // useEffect(()=>{postData()},[])
 
   const TicketCloseModal = () => {
     setIsTicketBoxOpen(false);
@@ -100,6 +106,8 @@ const MovieTime = ({
       setIsTimeBoxOpen(false);
     };
 
+    
+
     const getSeats = cinemaSeats.filter(
       (seat) => seat.RoomId === parseInt(Id.roomid)
     );
@@ -114,6 +122,8 @@ const MovieTime = ({
     });
 
     console.log(seatPrices[seatPrices.length - 1]);
+
+      // useEffect(()=>{postData()},[])
 
     return (
       <div className="w-[85%] h-screen grid place-items-center mx-auto">
