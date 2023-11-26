@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 
@@ -21,6 +22,8 @@ const MovieTime = ({
   const [showSeat, setShowSeat] = useState(false);
   const [showTime, setShowTime] = useState("");
   // const [seatPrice, setSeatPrice] = useState([]);
+
+  // useEffect(()=>{postData()},[])
 
   const openModal = () => {
     setIsTimeBoxOpen(true);
@@ -54,7 +57,7 @@ const MovieTime = ({
       setSeatNo(resultSeat);
     }
   };
-
+  // useEffect(()=>{handleClick()},[currentDiv]);
   const postData = () => {
     setIsTicketBoxOpen(true);
     // api.post('/Tbl_TicketReceive',{  

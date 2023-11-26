@@ -7,5 +7,5 @@ export const upcoming = axios.create({
 })
 
 export const api = axios.create({
-    baseURL: 'http://localhost:3300'
+    baseURL: 'https://movie-api-3wb9.onrender.com/'
 })
